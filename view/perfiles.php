@@ -10,7 +10,7 @@ if (!isset($_SESSION["username"])) {
   exit();
 }
 require_once("../controller/conexion.php");
-require_once("../model/consulta.php");
+require_once("../controller/perfiles.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,17 +53,16 @@ require_once("../model/consulta.php");
   <div class="content">
     <!--Table-->
     <div class="table-container">
-      <h1 class="heanding">Registro de Ingresos</h1>
+      <h1 class="heanding">Listado de los perfiles registrados</h1>
       <table class="table">
         <thead>
           <tr>
             <th>Nombres</th>
             <th>Apellidos</th>
             <th>Carrera/Area</th>
+            <th>Periodo</th>
             <th>Rol</th>
             <th>No Tarjeta</th>
-            <th>Fecha/Hora Entrada</th>
-            <th>Fecha/Hora Salida</th>
 
           </tr>
         </thead>
@@ -77,10 +76,9 @@ require_once("../model/consulta.php");
               <td data-label="Nombres"><?php echo $fila['nombres'] ?></td>
               <td data-label="Apellidos"><?php echo $fila['apelidos'] ?></td>
               <td data-label="Carrera/Area"><?php echo $fila['carrera_area'] ?></td>
+              <td data-label="Periodo"><?php echo $fila['periodo'] ?></td>
               <td data-label="Rol"><?php echo $fila['rol'] ?></td>
               <td data-label="No Tarjeta"><?php echo $fila['tarjeta'] ?></td>
-              <td data-label="Fecha/Hora Entrada"><?php echo $fila['fechaH_entrada'] ?></td>
-              <td data-label="Fecha/Hora Salida"><?php echo $fila['fechaH_salida'] ?></td>
             </tr>
           <?php }
           mysqli_free_result($resultado);

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/view/static/css/home.css">
+  <link rel="shortcut icon" href="/view/static/img/avatar.jpg" type="image/x-icon">
   <title>Document</title>
 </head>
 <body>
@@ -21,7 +22,6 @@
                 <input type="email" class="user" placeholder="Usuario" name="username" id="password">
                 <input type="password" name="password" id="password" class="pass" placeholder="Contraseña">
                 <button type="submit" class="btnIniciar">Iniciar Sesion</button>
-                <a href="#" class="soporte">Olvide mi contraseña</a>
             
 
             </form>

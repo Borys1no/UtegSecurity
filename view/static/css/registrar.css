@@ -91,83 +91,63 @@ body {
   font-family: sans-serif;
 }
 
-/*Table*/
-.table-container {
-  padding: 0 20%;
-  margin: 90px auto 0;
+.registro {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid var(--dorado-49);
 }
-.heanding {
-  font-size: 30px;
+.registro h1{
   font-family: sans-serif;
+}
+
+/* Estilos del formulario */
+form {
+  margin: 0;
+  padding: 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
   font-weight: bold;
-  margin-bottom: 40px;
+  margin-bottom: 5px;
+  font-family: sans-serif;
 }
-.table {
+
+input[type="text"],
+input[type="email"],
+select {
   width: 100%;
-  border-collapse: collapse;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
-.table thead {
-  background-color: #999999;
-}
-.table thead tr th {
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 0.35px;
-  color: #ffffff;
-  opacity: 1;
-  padding: 12px;
-  vertical-align: top;
-  border: 1px solid #000;
-  font-family: sans-serif;
-}
-.table tbody tr td {
-  font-size: 15px;
-  letter-spacing: 0.35px;
-  font-weight: normal;
-  color: #ffffff;
-  background-color: #3b5998;
-  padding: 8px;
-  border: 1px solid #000;
-  text-align: center;
+
+input[type="submit"] {
+  background-color: var(--principal-10);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
   font-family: sans-serif;
 }
 
+input[type="submit"]:hover {
+  background-color: var(--secundario-20);
+}
 
-/*End Table*/
+@media (max-width: 768px) {
+  
+}
 
 @media (max-width: 991px) {
-  .heanding{
-    font-size: 20px;
-  }
-  .table thead {
-    display: none;
-  }
-  .table,
-  .table tbody,
-  .table tr,
-  .table td {
-    display: block;
-    width: 100%;
-  }
-  .table tr{
-    margin-bottom: 15px;
-  }
-  .table tbody tr td{
-    text-align: right;
-    padding-left: 50%;
-    position: relative;
-  }
-  .table td::before{
-    content: attr(data-label);
-    position: absolute;
-    left: 0;
-    width: 50%;
-    padding-left: 15px;
-    font-weight: 600;
-    font-size: 14px;
-    text-align: left;
-  }
-  /*sidebar*/
   .sidebar {
     width: 107px;
     height: 100%;
@@ -221,5 +201,9 @@ body {
     border-radius: 50%;
   }
 
+  .registro {
+    max-width: 100%;
+    padding: 10px;
 }
 
+}
